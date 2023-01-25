@@ -4,7 +4,7 @@ title:  "Terre Haute"
 author: pretzellogician
 ---
 
-[Today's Permute puzzle]({{site.url}}/permuse/terre-haute/index.html) refers to [Terre Haute, Indiana](https://en.wikipedia.org/wiki/Terre_Haute,_Indiana).
+[Today's Permuse puzzle]({{site.url}}/permuse/terre-haute/index.html) refers to [Terre Haute, Indiana](https://en.wikipedia.org/wiki/Terre_Haute,_Indiana).
 
 ![Terre Haute city hall, public domain](https://upload.wikimedia.org/wikipedia/commons/e/ec/Terre_Haute%2C_Indiana_city_hall.jpg "Terre Haute city hall, public domain"){: width="600" height="300"}
 

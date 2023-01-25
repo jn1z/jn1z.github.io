@@ -4,7 +4,7 @@ title:  "I Grok Spock"
 author: pretzellogician
 ---
 
-[Today's Permute puzzle]({{site.url}}/permuse/groks-spock/index.html) refers to the phrase "I grok Spock", coined circa 1967 by fans to protest the cancellation of [Star Trek](https://en.wikipedia.org/wiki/Star_Trek).
+[Today's Permuse puzzle]({{site.url}}/permuse/groks-spock/index.html) refers to the phrase "I grok Spock", coined circa 1967 by fans to protest the cancellation of [Star Trek](https://en.wikipedia.org/wiki/Star_Trek).
 
 ![I grok Spock button, fair use]({{site.url}}/assets/img/groks-spock/i_grok_spock_button.jpg "I grok Spock button, fair use"){: width="300" height="300"}
 
