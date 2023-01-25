@@ -1,0 +1,1 @@
+let solution = 'terre';let solution2 = 'haute';let minDistance = 6;let solution_moves = ['tarre', 'terce', 'terne', 'terra', 'terry', 'terse'];

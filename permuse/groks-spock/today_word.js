@@ -1,0 +1,1 @@
+let solution = 'groks';let solution2 = 'spock';let minDistance = 6;let solution_moves = ['grogs', 'groks', 'gross', 'grots', 'grows'];

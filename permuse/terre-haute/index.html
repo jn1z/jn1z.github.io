@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="..\..\assets\css\style.css">
+	<script src="..\..\assets\js\game_data.js" defer></script>
+        <script src="dist.js" defer></script>
+        <script src="today_word.js" defer></script>
+        <script src="..\..\assets\js\script.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+	<title>Permuse</title>
+
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 640px;
+  background-color: black;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+</head>
+<body>
+
+	<header>
+		<center><b>Permuse</b></center>
+
+<!--		
+<button id="help-button" class="ButtonButton" type="button" aria-label="help">
+	<svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 17H12.01M12 14C12.89 12.094 15 12.23 15 10C15 8.5 14 7 12 7C10.45 7 9.503 7.9 9.153 9M12 21C16.97 21 21 16.97 21 12C21 7.03 16.97 3 12 3C7.03 3 3 7.03 3 12C3 16.97 7.03 21 12 21Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</button>
+-->
+
+<!--
+<button id="stats-button" class="ButtonButton" type="button" aria-label="statistics">
+<svg width="28" height="28" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<line class="a" x1="2" x2="22" y1="20" y2="20"/>
+<path class="a" d="M5,20V8.2A.2.2,0,0,1,5.2,8H7.8a.2.2,0,0,1,.2.2V20"/>
+<path class="a" d="M11,20V4.267C11,4.12,11.09,4,11.2,4h2.6c.110,0,.2.12.2.267V20"/>
+<path class="a" d="M17,20V11.15c0-.083.09-.15.2-.15h2.6c.11,0,.2.067.2.15V20"/></svg>
+</button>
+
+<button id="settings-button" class="ButtonButton" type="button" aria-label="settings">
+<svg fill="#000000" width="28" height="28" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="settings" class="icon glyph">
+	<path d="M20.99,10H19.42a1.04,1.04,0,0,1-.95-.674l-.005-.013a1.04,1.04,0,0,1,.2-1.146l1.11-1.11a1.01,1.01,0,0,0,0-1.43l-1.4-1.4a1.01,1.01,0,0,0-1.43,0l-1.11,1.11a1.04,1.04,0,0,1-1.15.2l-.013,0A1.04,1.04,0,0,1,14,4.58V3.01A1.01,1.01,0,0,0,13,2H11.009A1.01,1.01,0,0,0,10,3.01v1.57a1.04,1.04,0,0,1-.67.95l-.013,0a1.04,1.04,0,0,1-1.15-.2l-1.11-1.11a1.01,1.01,0,0,0-1.428,0l-1.4,1.4a1.01,1.01,0,0,0,0,1.43l1.11,1.11a1.04,1.04,0,0,1,.2,1.15l0,.013A1.04,1.04,0,0,1,4.58,10H3.01A1.01,1.01,0,0,0,2,11.01v1.98A1.01,1.01,0,0,0,3.01,14H4.58a1.04,1.04,0,0,1,.95.67l0,.013a1.04,1.04,0,0,1-.2,1.15l-1.11,1.11a1.01,1.01,0,0,0,0,1.43l1.4,1.4a1.01,1.01,0,0,0,1.43,0l1.11-1.11a1.04,1.04,0,0,1,1.15-.2l.013.005A1.04,1.04,0,0,1,10,19.42v1.571A1.01,1.01,0,0,0,11.01,22h1.98A1.01,1.01,0,0,0,14,20.99V19.42a1.04,1.04,0,0,1,.67-.951l.013-.005a1.04,1.04,0,0,1,1.15.2l1.11,1.11a1.01,1.01,0,0,0,1.43,0l1.4-1.4a1.01,1.01,0,0,0,0-1.43l-1.11-1.11a1.04,1.04,0,0,1-.2-1.15l.005-.013A1.04,1.04,0,0,1,19.4,14h1.571A1.01,1.01,0,0,0,22,12.99V11.01A1.01,1.01,0,0,0,20.99,10ZM12,15a3,3,0,1,1,3-3A3,3,0,0,1,12,15Z"/>
+	</svg>	
+</button>
+-->
+		What is Permuse?
+<div class="tooltip">&#x1F6C8;
+  <span class="tooltiptext">
+	  <p>Reach the target word in the fewest number of moves.</p>
+	  <p>Every day new words will be posted (along with commentary on the word choice).</p>
+	  <p>Each move must be a valid dictionary word of the same length, and is either a one-letter edit or a permutation of the previous move.</p>
+	  <p>Move colors indicate progress towards the target, in terms of the minimum distance remaining.
+	  <span style="color: rgb(103,169,207)">Blue</span> is positive,
+	  <span style="color: rgb(150,150,150)">gray</span> is no progress, and
+	  <span style="color: rgb(239,138,98)">red</span> is negative.</p>
+	  <p>You can delete previous move(s), but they count against your total guesses.</p>
+	  <p><center><u>Example</u></center></p>
+	  <p>Source is "cat", and target is "dog".</p>
+	  <p><center><span style="color: rgb(103,169,207)">cot</span></center></p>
+	  <p>would be a good start. In fact, "dot" or "cog" would then solve the puzzle.</p>
+	  <p><center><span style="color: rgb(150,150,150)">con</span></center></p>
+	  <p>would be a neutral (unnecessary) guess after "cot". Playing "dot" or "cog" would still solve the puzzle.</p>
+	  <p><center><span style="color: rgb(239,138,98)">can</span></center></p>
+	  <p>after "cot" would be negative progress. It would take an extra step to get back. Better to delete it!</p>
+
+  </span>
+</div>
+	</header>
+	 <center>
+		<div id="guessesRemaining">guesses remaining:10</div>
+	<div id="minimumDistance">minimum distance:7</div></center>
+
+	 <!--	<div id="game-screen">-->
+
+		<div id="topElts">
+			<div id="topElt-1" class="topElt">
+				<div class="guess-letter"></div>
+				<div class="guess-letter"></div>
+				<div class="guess-letter"></div>
+				<div class="guess-letter"></div>
+				<div class="guess-letter"></div>
+				<!--				<a href="https://m-w.com/dictionary/roach">definition</a>-->
+			</div>
+		</div>
+		<div id="guesses">
+			<div id="guess-1" class="guess">
+				<div class="guess-letter"></div>
+				<div class="guess-letter"></div>
+				<div class="guess-letter"></div>
+				<div class="guess-letter"></div>
+				<div class="guess-letter"></div>
+			</div>
+			<div class="tooltip">Legal moves
+  <span class="tooltiptext">BLAH </span>
+			</div>
+		</div>
+		<div id="botElts">
+			<div id="botElt-1" class="botElt">
+				<div class="guess-letter"></div>
+				<div class="guess-letter"></div>
+				<div class="guess-letter"></div>
+				<div class="guess-letter"></div>
+				<div class="guess-letter"></div>
+			</div>
+		</div>
+
+		<div id="keyboard">
+			<div class="keyboard-row">
+				<button id="letter-q" class="keyboard-letter single-tile-letter" onclick="keyClicked(this.innerText)">q</button>
+				<button id="letter-w" class="keyboard-letter single-tile-letter" onclick="keyClicked(this.innerText)">w</button>
+				<button id="letter-e" class="keyboard-letter single-tile-letter" onclick="keyClicked(this.innerText)">e</button>
+				<button id="letter-r" class="keyboard-letter single-tile-letter" onclick="keyClicked(this.innerText)">r</button>
+				<button id="letter-t" class="keyboard-letter single-tile-letter" onclick="keyClicked(this.innerText)">t</button>
+				<button id="letter-y" class="keyboard-letter single-tile-letter" onclick="keyClicked(this.innerText)">y</button>
+				<button id="letter-u" class="keyboard-letter single-tile-letter" onclick="keyClicked(this.innerText)">u</button>
+				<button id="letter-i" class="keyboard-letter single-tile-letter" onclick="keyClicked(this.innerText)">i</button>
+				<button id="letter-o" class="keyboard-letter single-tile-letter" onclick="keyClicked(this.innerText)">o</button>
+				<button id="letter-p" class="keyboard-letter single-tile-letter" onclick="keyClicked(this.innerText)">p</button>
+			</div>
+			<div class="keyboard-row">
+				<button id="letter-a" class="keyboard-letter single-tile-letter" onclick="keyClicked(this.innerText)">a</button>
+				<button id="letter-s" class="keyboard-letter single-tile-letter" onclick="keyClicked(this.innerText)">s</button>
+				<button id="letter-d" class="keyboard-letter single-tile-letter" onclick="keyClicked(this.innerText)">d</button>
+				<button id="letter-f" class="keyboard-letter single-tile-letter" onclick="keyClicked(this.innerText)">f</button>
+				<button id="letter-g" class="keyboard-letter single-tile-letter" onclick="keyClicked(this.innerText)">g</button>
+				<button id="letter-h" class="keyboard-letter single-tile-letter" onclick="keyClicked(this.innerText)">h</button>
+				<button id="letter-j" class="keyboard-letter single-tile-letter" onclick="keyClicked(this.innerText)">j</button>
+				<button id="letter-k" class="keyboard-letter single-tile-letter" onclick="keyClicked(this.innerText)">k</button>
+				<button id="letter-l" class="keyboard-letter single-tile-letter" onclick="keyClicked(this.innerText)">l</button>
+			</div>
+			<div class="keyboard-row">
+				<button id="letter-enter" class="keyboard-letter enter-letter capitalised-text" onclick="keyClicked(this.innerText)">Enter</button>
+				<button id="letter-z" class="keyboard-letter single-tile-letter" onclick="keyClicked(this.innerText)">z</button>
+				<button id="letter-x" class="keyboard-letter single-tile-letter" onclick="keyClicked(this.innerText)">x</button>
+				<button id="letter-c" class="keyboard-letter single-tile-letter" onclick="keyClicked(this.innerText)">c</button>
+				<button id="letter-v" class="keyboard-letter single-tile-letter" onclick="keyClicked(this.innerText)">v</button>
+				<button id="letter-b" class="keyboard-letter single-tile-letter" onclick="keyClicked(this.innerText)">b</button>
+				<button id="letter-n" class="keyboard-letter single-tile-letter" onclick="keyClicked(this.innerText)">n</button>
+				<button id="letter-m" class="keyboard-letter single-tile-letter" onclick="keyClicked(this.innerText)">m</button>
+				<button id="letter-backspace" class="keyboard-letter backspace-letter capitalised-text" onclick="keyClicked(this.innerText)">Backspace</button>
+			</div>
+		</div>
+
+		<!--	</div>-->
+
+</body>
+</html>
