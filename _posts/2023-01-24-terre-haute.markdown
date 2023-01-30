@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Terre Haute"
+title:  "Terre Haute (HARD)"
 author: pretzellogician
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Chuck Jones"
+title:  "Chuck Jones (MEDIUM)"
 author: pretzellogician
 ---
 

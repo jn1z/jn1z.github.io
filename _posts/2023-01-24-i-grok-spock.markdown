@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "I Grok Spock"
+title:  "I Grok Spock (HARD)"
 author: pretzellogician
 ---
 
