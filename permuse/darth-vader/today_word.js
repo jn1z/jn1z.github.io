@@ -1,0 +1,1 @@
+let solution = 'darth';let solution2 = 'vader';let minDistance = 5;let solution_moves = ['darts', 'earth', 'garth'];
