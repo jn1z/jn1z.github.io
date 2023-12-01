@@ -247,7 +247,7 @@ var app = new Vue({
             if (this.color_current_move > this.num_colors) {
                 this.color_current_move = 1;
             }
-            if (!hasLegalMove(this.color_current_move, this.board)) {
+            while (!this.player_can_move[this.color_current_move] || !hasLegalMove(this.color_current_move, this.board)) {
                 console.log("No legal moves for " + this.color_current_move + ", skipping turn.");
                 this.player_can_move[this.color_current_move] = false;
                 this.color_current_move += 1;
@@ -277,10 +277,10 @@ var app = new Vue({
                 const messageElement = document.getElementById('winningMessage');
                 messageElement.style.display = 'flex';
 
-                // Hide the message after 3 seconds
+                // Hide the message after 2.5 seconds
                 setTimeout(function() {
                     messageElement.style.display = 'none';
-                }, 3000);
+                }, 2500);
             }
 
             this._switch_player();
@@ -310,7 +310,7 @@ var app = new Vue({
             if (this.player_can_move[n]) {
                 return 1.0;
             }
-            return 0.5;
+            return 0.2;
         },
     }
 })
